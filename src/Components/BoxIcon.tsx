@@ -16,7 +16,7 @@ function BoxIcon({
   return (
     <div
       className={classNames(
-        "w-[40px] aspect-square rounded-sm flex justify-center items-center",
+        "w-[30px] h-[30px] rounded-sm flex justify-center items-center",
         bgColor
       )}
     >

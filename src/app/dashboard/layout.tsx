@@ -1,3 +1,4 @@
+import LeftMenu from "@/Components/LeftMenu";
 import React, {ReactNode} from "react";
 
 type LayoutProps = {
@@ -6,11 +7,13 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({children}) => {
     return (
-        <div>
-            <main>
+        <main>
+            hsd
+            <div className="w-screen h-screen  bg-gray-500 flex gap-4">
+                <LeftMenu />
                 {children}
-            </main>
-        </div>
+            </div>
+        </main>
     );
 };
 
