@@ -9,7 +9,7 @@ function LeftMenu() {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <div className={classNames("bg-black w-[230px] h-screen pt-[30px] flex-col items-center relative", isCollapsed && "w-[70px]")}>
+    <div className={classNames("hidden md:block bg-black w-[230px] h-screen pt-[30px] flex-col items-center relative", isCollapsed && "w-[70px]")}>
       <div className="w-[25px] h-[25px] rounded-full bg-white flex justify-center items-center absolute top-[20px] -right-[10px] hover:cursor-pointer" onClick={() => {setIsCollapsed(!isCollapsed)}}>
        {isCollapsed ?  <FaAngleRight size={10}/>: <FaAngleLeft size={10}/>}
       </div>
