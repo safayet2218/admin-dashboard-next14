@@ -5,10 +5,21 @@ function BoxIcon({
   backgroundColor,
 }: {
   icon: React.ReactNode;
-  backgroundColor?: string;
+  backgroundColor?: "WHITE" | "GRAY";
 }) {
+  const bgColor = backgroundColor
+    ? backgroundColor == "WHITE"
+      ? "bg-white"
+      : "bg-[#222222]"
+    : "bg-transparent";
+
   return (
-    <div className={classNames("w-[40px] aspect-square bg-black rounded-sm flex justify-center items-center", "bg-green-600")}>
+    <div
+      className={classNames(
+        "w-[40px] aspect-square rounded-sm flex justify-center items-center",
+        bgColor
+      )}
+    >
       {icon}
     </div>
   );
