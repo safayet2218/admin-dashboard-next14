@@ -1,27 +1,20 @@
-"use client";
-import Header from "@/Components/Header";
-import LeftMenu from "@/Components/LeftMenu";
-import React, {ReactNode} from "react";
-import { useState } from "react";
+import MainContainer from "@/components/layouts/main-container";
+import SideBar from "@/components/layouts/sidebar";
+import React from "react";
 
-type LayoutProps = {
-    children: ReactNode;
+export default function DefaultLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <div className="relative">
+        <MainContainer >
+            <SideBar/>
+            {children}
+        </MainContainer>
+      </div>
+    </>
+  );
 }
-
-const Layout: React.FC<LayoutProps> = ({children}) => {
-    const [isCollapsed, setIsCollapsed] = useState(true);
-
-    return (
-        <main>
-            <div className="w-screen h-screen  bg-gray-500 flex ">
-                <LeftMenu isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
-                <div className=" w-full">
-                <Header isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed}/>
-                {children}
-                </div>
-            </div>
-        </main>
-    );
-};
-
-export default Layout;

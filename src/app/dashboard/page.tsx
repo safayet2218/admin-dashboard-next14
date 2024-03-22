@@ -1,14 +1,11 @@
-import LeftMenu from "@/Components/LeftMenu";
-import React from "react";
+import React from 'react'
 
-function Index() {
+function page() {
   return (
-    <>
-      <div>
-      fgdfgd
-      </div>
-    </>
-  );
+    <div>
+      dash
+    </div>
+  )
 }
 
-export default Index;
+export default page
