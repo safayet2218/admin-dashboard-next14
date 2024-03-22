@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import IconMenuDashboard from "../icon/icon-menu-dashboard";
 import IconCaretDown from "../icon/icon-caret-down";
+import AnimateHeight from 'react-animate-height';
 
 function SideBar() {
     const dispatch = useDispatch();
