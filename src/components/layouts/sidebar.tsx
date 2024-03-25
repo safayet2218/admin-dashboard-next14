@@ -88,7 +88,7 @@ function SideBar() {
                     <button type="button" className={`${currentMenu === 'dashboard' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('dashboard')}>
                         <div className="flex items-center">
                             <IconMenuDashboard className="shrink-0 group-hover:!text-primary" />
-                            <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">{t('dashboard')}</span>
+                            <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">dashboard</span>
                         </div>
 
                         <div className={currentMenu !== 'dashboard' ? '-rotate-90 rtl:rotate-90' : ''}>
@@ -99,16 +99,16 @@ function SideBar() {
                     <AnimateHeight duration={300} height={currentMenu === 'dashboard' ? 'auto' : 0}>
                         <ul className="sub-menu text-gray-500">
                             <li>
-                                <Link href="/">{t('sales')}</Link>
+                                <Link href="/">sales</Link>
                             </li>
                             <li>
-                                <Link href="/analytics">{t('analytics')}</Link>
+                                <Link href="/analytics">analytics</Link>
                             </li>
                             <li>
-                                <Link href="/finance">{t('finance')}</Link>
+                                <Link href="/finance">finance</Link>
                             </li>
                             <li>
-                                <Link href="/crypto">{t('crypto')}</Link>
+                                <Link href="/crypto">crypto</Link>
                             </li>
                         </ul>
                     </AnimateHeight>
